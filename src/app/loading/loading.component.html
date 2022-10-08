@@ -1,0 +1,25 @@
+<h1>{{currentTitle}}</h1>
+<h2>{{currentSubtitle}}</h2>
+<div class="loadingBar">
+  <div
+    class="progressBar"
+    [style.width.%]="barSize"
+  ></div>
+</div>
+<table>
+  <tr *ngFor="let step of steps">
+    <td>
+      {{step.statusName}}
+    </td>
+    <td>
+      {{step.name}}
+    </td>
+  </tr>
+</table>
+<div>
+  <button (click)="start()">Start</button>
+  <button (click)="pause()">Pause</button>
+  <button (click)="restart()">Restart</button>
+  <button (click)="stop()">Stop</button>
+</div>
+<pre>{{secondsElapsed}}</pre>
